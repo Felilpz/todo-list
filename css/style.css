@@ -4,6 +4,7 @@
 :root {
     --Azul: #102F5e;
     --Branco: #fff;
+    --Fundo: #395169;
 }
 
 * {
@@ -50,10 +51,9 @@ input, select {
     padding: 0.25rem .5rem;
 }
 
-/* .esconder {
+.esconder {
     display: none;
-} */
-
+}
 /* Header */
 #container-tarefa {
     max-width: 450px;
@@ -119,7 +119,7 @@ input, select {
 
 #pesquisar input {
     width: 100%;
-    margin-right: .3rem;
+    margin-right: 0.3rem;
 }
 
 #filtro {
@@ -130,4 +130,33 @@ input, select {
 
 #filtro select {
     flex: 1; /*Cresce até o fim, da área que estiver disponível*/
+}
+
+/* Tarefas */
+.tarefas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    transition: .3s;
+}
+
+.tarefas h3 {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.tarefas button {
+    margin-left: .4rem;
+}
+
+.feito {
+    background-color: var(--Fundo);
+}
+
+.feito h3 { 
+    color: var(--Branco);
+    text-decoration: line-through;
+    font-style: italic;
 }
