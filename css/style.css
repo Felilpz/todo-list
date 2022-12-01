@@ -1,0 +1,133 @@
+/* Gerais */
+@charset "UTF-8";
+
+:root {
+    --Azul: #102F5e;
+    --Branco: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-seriff;
+    color: #333;
+}
+
+body {
+    background-color: lightgrey; /*adicionar lineargradient*/
+}
+
+button {
+    background-color: #FDFDFD;
+    color: var(--Azul);
+    border: 2px solid var(--Azul);
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: var(--Azul);
+    color: var(--Branco);
+}
+
+button:hover > i {
+    color: var(--Branco);
+}
+
+button i {
+    color: var(--Azul);
+    font-weight: bold;
+    pointer-events: none; /*Como se eu tivesse clicado no botão, não no ícone*/
+}
+
+input, select {
+    padding: 0.25rem .5rem;
+}
+
+/* .esconder {
+    display: none;
+} */
+
+/* Header */
+#container-tarefa {
+    max-width: 450px;
+    margin: 3rem auto;
+    background: #FDFDFD;
+    padding: 1.5rem;
+}
+
+#container-tarefa header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Formularios gerais */
+#tarefa-formulario, #editar-formulario {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+#tarefa-formulario p, #editar-formulario p {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    margin-right: .3rem;
+    /* width: 100%; */
+}
+
+#cancelar-edit {
+    margin-top: 1rem;
+    /* width: 100%; */
+}
+
+/* Barra de ferramentas */
+#barra-de-ferramentas {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+#barra-de-ferramentas h4 {
+    margin-bottom: .5rem;
+}
+
+#pesquisar {
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#pesquisar form {
+    display: flex;
+}
+
+#pesquisar input {
+    width: 100%;
+    margin-right: .3rem;
+}
+
+#filtro {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filtro select {
+    flex: 1; /*Cresce até o fim, da área que estiver disponível*/
+}

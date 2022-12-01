@@ -1,0 +1,80 @@
+<!-- Arquivo principal -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Link JS -->
+    <script src="../js/script.js" defer></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
+    <!-- Link Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div id="container-tarefa">
+        <header>
+            <h1>Lista de tarefas</h1>
+        </header>
+        <form id="tarefa-formulario">
+            <p>Adicionar tarefa:</p>
+            <div class="form-control">
+                <input type="text" name="adicionarName" id="adicionarId" placeholder="O que você vai fazer?">
+                <button type="submit">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+            </div>
+        </form>
+        <form id="editar-formulario" class="esconder">
+            <p>Editar tarefa: </p>
+            <div class="form-control">
+                <input type="text" name="editarName" id="editarId" placeholder="Editar tarefa...">
+                <button type="submit">
+                    <i class="bi bi-pencil-fill"></i>
+                </button>
+            </div>
+            <button id="cancelar-edit">
+                Cancelar
+            </button>
+        </form>
+        <div id="barra-de-ferramentas">
+            <div id="pesquisar">
+                <h4>Pesquisar</h4>
+                <form>
+                    <input type="text" name="pesquisarName" id="pesquisarId" placeholder="Fazer busca...">
+                    <button id="apagar" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div id="filtro">
+                <p>Filtrar:</p>
+                <select name="filtroName" id="filtroId">
+                    <option value="all">Todos</option>
+                    <option value="done">Feito</option>
+                    <option value="todo">A fazer</option>
+                </select>
+            </div>
+        </div>
+        <div id="lista-tarefas">
+            <div class="tarefas">
+                <h3>Estou fazendo alguma coisa...</h3>
+                <button class="finalizarTarefa" type="submit">
+                    <i class="bi bi-check-lg"></i>
+                </button>
+                <button class="editarTarefa" type="submit">
+                    <i class="bi bi-pencil-fill"></i>
+                </button>
+                <button class="removerTarefa" type="submit">
+                    <i class="bi bi-trash-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
