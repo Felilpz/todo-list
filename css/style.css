@@ -1,29 +1,22 @@
-/* Gerais */
-@charset "UTF-8";
-
-:root {
-    --Azul: #102F5e;
-    --Branco: #fff;
-    --Fundo: #395169;
-}
-
+/* Geral */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-seriff;
+    font-family: Verdana;
     color: #333;
 }
 
 body {
-    background-color: lightgrey; /*adicionar lineargradient*/
+    background-color: lightgrey;
+    scroll-behavior: smooth;
 }
 
 button {
-    background-color: #FDFDFD;
-    color: var(--Azul);
-    border: 2px solid var(--Azul);
-    padding: .3rem .6rem;
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: 0.3rem 0.6rem;
     font-size: 1rem;
     cursor: pointer;
     display: flex;
@@ -33,49 +26,53 @@ button {
 }
 
 button:hover {
-    background-color: var(--Azul);
-    color: var(--Branco);
+    background-color: #102f5e;
 }
 
-button:hover > i {
-    color: var(--Branco);
+button:hover>i {
+    color: #fff;
 }
 
 button i {
-    color: var(--Azul);
+    pointer-events: none;
+    color: #102f5e;
     font-weight: bold;
-    pointer-events: none; /*Como se eu tivesse clicado no botão, não no ícone*/
 }
 
-input, select {
-    padding: 0.25rem .5rem;
+input,
+select {
+    padding: 0.25rem 0.5rem;
 }
 
-.esconder {
+.hide {
     display: none;
 }
-/* Header */
-#container-tarefa {
+
+/* Todo Header */
+#todo-container {
     max-width: 450px;
-    margin: 3rem auto;
-    background: #FDFDFD;
+    margin: 3rem auto 0;
+    background-color: #fdfdfd;
     padding: 1.5rem;
+    border-radius: 15px;
 }
 
-#container-tarefa header {
+#todo-container header {
     text-align: center;
     padding: 0 1rem 1rem;
     border-bottom: 1px solid #ccc;
 }
 
-/* Formularios gerais */
-#tarefa-formulario, #editar-formulario {
+/* Todo Form */
+#todo-form,
+#edit-form {
     padding: 1rem;
     border-bottom: 1px solid #ccc;
 }
 
-#tarefa-formulario p, #editar-formulario p {
-    margin-bottom: .5rem;
+#todo-form p,
+#edit-form p {
+    margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
@@ -84,27 +81,26 @@ input, select {
 }
 
 .form-control input {
-    margin-right: .3rem;
-    /* width: 100%; */
+    margin-right: 0.3rem;
 }
 
-#cancelar-edit {
+#cancel-edit-btn {
     margin-top: 1rem;
-    /* width: 100%; */
+    color: #444;
 }
 
-/* Barra de ferramentas */
-#barra-de-ferramentas {
+/* Todo Toolbar */
+#toolbar {
     padding: 1rem;
     border-bottom: 1px solid #ccc;
     display: flex;
 }
 
-#barra-de-ferramentas h4 {
-    margin-bottom: .5rem;
+#toolbar h4 {
+    margin-bottom: 0.5rem;
 }
 
-#pesquisar {
+#search {
     border-right: 1px solid #ddd;
     padding-right: 1rem;
     margin-right: 1rem;
@@ -113,50 +109,50 @@ input, select {
     flex-direction: column;
 }
 
-#pesquisar form {
+#search form {
     display: flex;
 }
 
-#pesquisar input {
+#search input {
     width: 100%;
     margin-right: 0.3rem;
 }
 
-#filtro {
+#filter {
     width: 35%;
     display: flex;
     flex-direction: column;
 }
 
-#filtro select {
-    flex: 1; /*Cresce até o fim, da área que estiver disponível*/
+#filter select {
+    flex: 1;
 }
 
-/* Tarefas */
-.tarefas {
+/* Todo List */
+.todo {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-    transition: .3s;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
 }
 
-.tarefas h3 {
+.todo h3 {
     flex: 1;
     font-size: 0.9rem;
 }
 
-.tarefas button {
-    margin-left: .4rem;
+.todo button {
+    margin-left: 0.4rem;
 }
 
-.feito {
-    background-color: var(--Fundo);
+.done {
+    background: #395169;
 }
 
-.feito h3 { 
-    color: var(--Branco);
+.done h3 {
+    color: #fff;
     text-decoration: line-through;
     font-style: italic;
 }
