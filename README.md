@@ -13,6 +13,8 @@ O projeto é desafiador, desta vez, fiz com ajuda da video aula <em>Projeto de J
 - Modificação de atributos e classes dos elementos HTML, e
 - Utilização do Web Storage.
 
+Apenas os botões de "criar nova tarefa", "marcar como feito", "editar", "excluir" e "cancelar" estão funcionando.
+
 <em>"Aprender a utilizar o JavaScript vanilla e o DOM é necessário para qualquer desenvolvedor, isso possibilita o aprendizado facilitado em: React, Vue e Angular. Que são outros frameworks muito utilizados nas grandes empresas"</em>
 
 <strong>Pretendo adquirir mais conhecimento e voltar a fazer esse projeto desafiador, mas com bootstrap e dessa vez tentando fazer "por mim mesmo".</strong>
